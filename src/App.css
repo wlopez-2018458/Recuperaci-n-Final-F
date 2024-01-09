@@ -1,38 +1,104 @@
 .App {
   text-align: center;
+  font-size: calc(12px + 2vmin);
+  width: 80%;
+  margin: 0 auto;
+  color: #EFEFEF;
+  background-color: #282828;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task-card {
+  background-color: #313131;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-card:hover {
+  transform: scale(1.05);
+}
+
+.task-info {
+  margin-bottom: 10px;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.task-btn {
+  width: 70%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.task-btn:hover {
+  background: #95003a;
+}
+
+.empty-list {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  height: 25px;
+  width: 70%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px #313131 solid;
+  background: none;
+  font-size: 1rem;
+  color: #D3D3D3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+input:focus {
+  outline: none;
+  border-bottom: 2px #B30047 solid;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  background: #B30047;
+  border-radius: 5px;
+  color: #EFEFEF;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #95003a;
+}
+
+button:focus {
+  outline: none;
 }
